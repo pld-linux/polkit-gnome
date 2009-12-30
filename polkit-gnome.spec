@@ -1,25 +1,27 @@
 Summary:	GNOME dialogs for PolicyKit
 Summary(pl.UTF-8):	Okna dialogowe GNOME dla pakietu PolicyKit
 Name:		polkit-gnome
-Version:	0.94
-Release:	2
+Version:	0.95
+Release:	1
 License:	LGPL v2+
 Group:		X11/Applications
 Source0:	http://hal.freedesktop.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	eebab8363a7b7c0516aca4f7b7cd7f7a
+# Source0-md5:	e52555258ebae5d3f080b7b4cd6aedd4
 URL:		http://people.freedesktop.org/~david/polkit-spec.html
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
+BuildRequires:	dbus-glib-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-common >= 2.0
 BuildRequires:	gnome-doc-utils
-BuildRequires:	gtk+2-devel >= 2:2.17.1
+BuildRequires:	gobject-introspection-devel >= 0.6.2
+BuildRequires:	gtk+2-devel >= 2:2.18.0
 BuildRequires:	gtk-doc >= 1.3
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	polkit-devel >= 0.94
-Requires:	polkit >= 0.94
+BuildRequires:	polkit-devel >= 0.95
+Requires:	polkit >= 0.95
 Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -94,6 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libpolkit-gtk-1.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libpolkit-gtk-1.so.0
+%{_libdir}/girepository-1.0/PolkitGtk-1.0.typelib
 
 %files devel
 %defattr(644,root,root,755)
@@ -101,3 +104,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libpolkit-gtk-1.la
 %{_includedir}/polkit-gtk-1
 %{_pkgconfigdir}/polkit-gtk-1.pc
+%{_datadir}/gir-1.0/PolkitGtk-1.0.gir

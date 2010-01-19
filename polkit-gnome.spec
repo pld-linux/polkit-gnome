@@ -12,6 +12,8 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	dbus-glib-devel
 BuildRequires:	gettext-devel
+BuildRequires:	gir-repository-devel
+BuildRequires:	glibc-misc
 BuildRequires:	gnome-common >= 2.0
 BuildRequires:	gnome-doc-utils
 BuildRequires:	gobject-introspection-devel >= 0.6.2
@@ -21,8 +23,8 @@ BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	polkit-devel >= 0.96
-Requires:	polkit >= 0.96
 Requires:	%{name}-libs = %{version}-%{release}
+Requires:	polkit >= 0.96
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

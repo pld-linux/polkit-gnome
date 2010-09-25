@@ -1,0 +1,12 @@
+--- polkit-gnome-0.99/polkitgtk/Makefile.am~	2010-09-15 22:03:30.000000000 +0200
++++ polkit-gnome-0.99/polkitgtk/Makefile.am	2010-09-25 16:31:11.946324358 +0200
+@@ -78,7 +78,8 @@
+ PolkitGtk-1.0.gir: libpolkit-gtk-1.la $(G_IR_SCANNER) Makefile.am
+ 	$(G_IR_SCANNER) -v 					\
+ 		--namespace PolkitGtk 				\
+-		--strip-prefix=Polkit				\
++		--identifier-prefix=Polkit			\
++		--symbol-prefix=polkit				\
+ 		--nsversion=1.0 				\
+ 		--include=Gtk-2.0 				\
+ 		--include=Polkit-1.0 				\

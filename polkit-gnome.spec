@@ -1,28 +1,28 @@
 Summary:	GNOME dialogs for PolicyKit
 Summary(pl.UTF-8):	Okna dialogowe GNOME dla pakietu PolicyKit
 Name:		polkit-gnome
-Version:	0.96
+Version:	0.99
 Release:	1
 License:	LGPL v2+
 Group:		X11/Applications
 Source0:	http://hal.freedesktop.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	611cf39fba2945320fc7a9ec49087e69
+# Source0-md5:	f1a2565083266bc8c05c60aa7d8a0f6a
+Patch0:		gobject-introspection.patch
 URL:		http://people.freedesktop.org/~david/polkit-spec.html
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	dbus-glib-devel
 BuildRequires:	gettext-devel
-BuildRequires:	gir-repository-devel
 BuildRequires:	glibc-misc
 BuildRequires:	gnome-common >= 2.0
 BuildRequires:	gnome-doc-utils
-BuildRequires:	gobject-introspection-devel >= 0.6.2
+BuildRequires:	gobject-introspection-devel >= 0.9.5
 BuildRequires:	gtk+2-devel >= 2:2.18.0
 BuildRequires:	gtk-doc >= 1.3
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	polkit-devel >= 0.96
+BuildRequires:	polkit-devel >= 0.99
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	polkit >= 0.96
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -61,6 +61,7 @@ Pliki nagłówkowe PolicyKit dla GNOME.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__intltoolize}

@@ -24,7 +24,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	polkit-devel >= 0.99
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	polkit >= 0.96
+Requires:	polkit >= 0.99
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

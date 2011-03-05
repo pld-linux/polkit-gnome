@@ -1,16 +1,17 @@
 Summary:	GNOME dialogs for PolicyKit
 Summary(pl.UTF-8):	Okna dialogowe GNOME dla pakietu PolicyKit
 Name:		polkit-gnome
-Version:	0.99
+Version:	0.101
 Release:	1
 License:	LGPL v2+
 Group:		X11/Applications
 Source0:	http://hal.freedesktop.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	f1a2565083266bc8c05c60aa7d8a0f6a
+# Source0-md5:	da6aaff473ed80f8958fd6f67a59defe
 Patch0:		gobject-introspection.patch
-URL:		http://people.freedesktop.org/~david/polkit-spec.html
+URL:		http://hal.freedesktop.org/docs/PolicyKit-gnome/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
+BuildRequires:	cairo-gobject-devel
 BuildRequires:	dbus-glib-devel
 BuildRequires:	gettext-devel
 BuildRequires:	glibc-misc
@@ -32,9 +33,9 @@ polkit-gnome provides a D-BUS session bus service that is used to
 bring up authentication dialogs used for obtaining privileges.
 
 %description -l pl.UTF-8
-Pakiet polkit-gnome udostępnia usługę magistrali sesji D-BUS
-służącą do wyświetlania okien dialogowych uwierzytelniania w celu
-uzyskania uprawnień.
+Pakiet polkit-gnome udostępnia usługę magistrali sesji D-BUS służącą
+do wyświetlania okien dialogowych uwierzytelniania w celu uzyskania
+uprawnień.
 
 %package libs
 Summary:	PolicyKit GNOME libraries
@@ -93,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS TODO
 %attr(755,root,root) %{_libexecdir}/polkit-gnome-authentication-agent-1
-%{_sysconfdir}/xdg/autostart/polkit-gnome-authentication-agent-1.desktop
+#%{_sysconfdir}/xdg/autostart/polkit-gnome-authentication-agent-1.desktop
 
 %files libs
 %defattr(644,root,root,755)

@@ -2,7 +2,7 @@ Summary:	GNOME dialogs for PolicyKit
 Summary(pl.UTF-8):	Okna dialogowe GNOME dla pakietu PolicyKit
 Name:		polkit-gnome
 Version:	0.101
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		X11/Applications
 Source0:	http://hal.freedesktop.org/releases/%{name}-%{version}.tar.bz2
@@ -24,6 +24,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	polkit-devel >= 0.99
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	polkit >= 0.99
+Obsoletes:	PolicyKit-gnome
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,6 +40,7 @@ uprawnień.
 Summary:	PolicyKit GNOME libraries
 Summary(pl.UTF-8):	Biblioteki PolicyKit dla GNOME
 Group:		Libraries
+Obsoletes:	PolicyKit-gnome-libs
 
 %description libs
 PolicyKit GNOME libraries.
@@ -52,6 +54,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe PolicyKit dla GNOME
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	polkit-devel >= 0.99
+Obsoletes:	PolicyKit-gnome-devel
 
 %description devel
 PolicyKit header files for GNOME.

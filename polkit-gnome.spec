@@ -1,12 +1,12 @@
 Summary:	GNOME dialogs for PolicyKit
 Summary(pl.UTF-8):	Okna dialogowe GNOME dla pakietu PolicyKit
 Name:		polkit-gnome
-Version:	0.101
-Release:	2
+Version:	0.102
+Release:	1
 License:	LGPL v2+
 Group:		X11/Applications
 Source0:	http://hal.freedesktop.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	da6aaff473ed80f8958fd6f67a59defe
+# Source0-md5:	f6b485ffd7bd605af815fd2747180481
 Patch0:		gobject-introspection.patch
 URL:		http://hal.freedesktop.org/docs/PolicyKit-gnome/
 BuildRequires:	autoconf >= 2.50

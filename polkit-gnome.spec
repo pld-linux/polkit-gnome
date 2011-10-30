@@ -19,7 +19,7 @@ BuildRequires:	gobject-introspection-devel >= 0.10.0
 BuildRequires:	gtk+3-devel >= 3.0.0
 BuildRequires:	gtk-doc >= 1.3
 BuildRequires:	intltool >= 0.40.0
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	pkgconfig
 BuildRequires:	polkit-devel >= 0.99
 Requires:	glib2 >= 1:2.30.0

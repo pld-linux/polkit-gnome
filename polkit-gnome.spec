@@ -10,7 +10,7 @@ Source0:	http://download.gnome.org/sources/polkit-gnome/%{version}/%{name}-%{ver
 URL:		http://hal.freedesktop.org/docs/PolicyKit-gnome/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.30.0
 BuildRequires:	glibc-misc
 BuildRequires:	gnome-common >= 2.0
